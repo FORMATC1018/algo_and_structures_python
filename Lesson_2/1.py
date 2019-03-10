@@ -9,3 +9,27 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+while True:
+    a=int(input("Введите первое число - "))
+    b=int(input("Введите второе число - "))
+    operation = input("Введите символ операции\n+    сложение;\n-    вычитание;\n*    умножение;\n/    сложение;\n0    выход;\n")
+    if operation=="+":
+        print("a+b = {}".format(a+b))
+    elif operation=="-":
+        print("a-b = {}".format(a-b))
+    elif operation=="*":
+        print("a*b = {}".format(a*b))
+    elif operation=="/":
+        if b==0:
+            print("Делить на нуль нельзя")
+        else:
+            print("a/b = %.2f" % (a/b))
+            continue
+    elif operation=="0":
+        print("Программа завершена")
+        break
+    else:
+        print("Вы введи невозможный символ - введите еще раз")
+        continue
+
